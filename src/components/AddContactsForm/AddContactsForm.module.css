@@ -1,0 +1,22 @@
+.form {
+	border: 1px solid #000;
+	width: 300px;
+	margin-bottom: 20px;
+	padding: 10px ;
+}
+
+label {
+	margin-bottom: 5px;
+	margin-top: 15px;
+}
+
+.add_btn {
+	margin-top: 15px;
+	border-radius: 4px;
+}
+
+.add_btn:hover,
+.add_btn:hover {
+	background: #1512e9;
+}
+

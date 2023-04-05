@@ -1,0 +1,15 @@
+.contacts_item {
+	margin-top: 5px;
+	
+}
+
+.delete_btn {
+	margin-left: 10px;
+	font-size: 12px;
+	border-radius: 4px;
+}
+
+.delete_btn:hover,
+.delete_btn:focus {
+	background: #2a06f5;
+}

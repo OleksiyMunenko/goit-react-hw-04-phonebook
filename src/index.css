@@ -13,3 +13,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+label,
+input {
+	display: block;
+}
+
+ul,
+h2 {
+	margin: 0;
+	padding: 0;
+}
+
+.phonebook {
+	padding: 15px 30px;
+}
