@@ -46,6 +46,7 @@ export class App extends Component {
 			contacts: [contact, ...prevState.contacts]
 		}))
 	 }
+	 
 
 	 onChangeFilter = ({target:{name, value}}) => {
 		this.setState({
