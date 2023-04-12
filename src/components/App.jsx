@@ -47,7 +47,6 @@ export class App extends Component {
 		}))
 	 }
 
-
 	 onChangeFilter = ({target:{name, value}}) => {
 		this.setState({
 			[name]: value
