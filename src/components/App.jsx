@@ -5,8 +5,10 @@ import { nanoid } from 'nanoid';
 import  AddContactsForm  from "./AddContactsForm/AddContactsForm";
 import ContactsFilter from "./ContactsFilter/CotactsFilter";
 import {ContactsList} from "./ContactsList/ContactsList";
-import {ContactsItem} from "./ContactsItem/ContactsItem"
+import {ContactsItem} from "./ContactsItem/ContactsItem";
 
+
+const CONTACTS_KEY = 'contacts';
 export class App extends Component {
 	state = {
 		contacts: [
@@ -17,6 +19,22 @@ export class App extends Component {
 		],
 		filter: ''
 	 }
+
+
+	 componentDidMount() {
+		const readContacts = localStorage.getItem(CONTACTS_KEY);
+		const passedContacts = JSON.parse(readContacts)
+
+		if (passedContacts) {
+			this.setState({contacts: passedContacts})
+		}
+	 }
+
+	componentDidUpdate(prevProps, prevState) {
+		if (prevState.contacts !== this.state.contacts) {
+			localStorage.setItem(CONTACTS_KEY, JSON.stringify(this.state.contacts))
+		 }
+	}
 
 	 createContact = ({name, number}) => {
 		const contact =  {

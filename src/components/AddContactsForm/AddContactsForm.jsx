@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { PropTypes } from 'prop-types';
-import css from "./AddContactsForm.module.css"
+import css from "./AddContactsForm.module.css";
 
 
 export default class AddContactsForm extends Component {
@@ -19,9 +19,8 @@ export default class AddContactsForm extends Component {
 		e.preventDefault()
 
 		const {name, number } = this.state;
-		const { contacts } = this.props;
 
-		if (contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
+		if (this.props.contacts.find(contact => contact.name.toLowerCase() === name.toLowerCase())) {
 			return alert(`${name} is already in contacts.`);
 	  } 
 
